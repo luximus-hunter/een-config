@@ -7,6 +7,6 @@ services:
     restart: unless-stopped
   uno-backend:
     ports:
-      - '4000:5000'
+      - '5000:5000'
     image: uno-backend
     restart: unless-stopped
