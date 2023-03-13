@@ -1,11 +1,11 @@
-cd ~/Docker
+cd ~/Docker || exit
 git clone https://github.com/luximus-hunter/een-frontend.git frontend
-cd ./frontend
+cd ./frontend || exit
 docker build -t uno-frontend -f Dockerfile .
-cd ..
+cd ~/Docker || exit
 rm -rf ./frontend
 git clone https://github.com/luximus-hunter/een-backend.git backend
-cd ./backend
+cd ./backend || exit
 docker build -t uno-backend -f Dockerfile .
 cd ..
 rm -rf ./backend

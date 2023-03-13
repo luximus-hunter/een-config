@@ -6,15 +6,15 @@ services:
     image: uno-frontend
     restart: unless-stopped
     networks:
-      - front-tier
-      - back-tier
+      - frontend
+      - backend
   uno-backend:
     ports:
       - '5000:5000'
     image: uno-backend
     restart: unless-stopped
     networks:
-      - back-tier
+      - backend
 networks:
-  front-tier: {}
-  back-tier: {}
+  frontend: {}
+  backend: {}
