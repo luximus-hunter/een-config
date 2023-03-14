@@ -5,8 +5,16 @@ services:
       - '3000:3000'
     image: uno-frontend
     restart: unless-stopped
+    networks:
+      hostnet: {}
   uno-backend:
     ports:
       - '5000:80'
     image: uno-backend
     restart: unless-stopped
+    networks:
+      hostnet: {}
+networks:
+  hostnet:
+    external: true
+    name: host
