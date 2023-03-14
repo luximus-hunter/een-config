@@ -6,15 +6,13 @@ services:
     image: uno-frontend
     restart: unless-stopped
     networks:
-      hostnet: {}
+      - net
   uno-backend:
     ports:
       - '5000:80'
     image: uno-backend
     restart: unless-stopped
     networks:
-      hostnet: {}
+      - net
 networks:
-  hostnet:
-    external: true
-    name: host
+  net: {}
