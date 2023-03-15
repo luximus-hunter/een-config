@@ -1,3 +1,4 @@
 docker compose down
-sh ./build.sh
+sh ./pull.sh
+sh ./clear.sh
 docker compose up -d

@@ -3,14 +3,16 @@ services:
   uno-frontend:
     ports:
       - '3000:3000'
-    image: uno-frontend
+    image: een/frontend
+    build: ./frontend
     restart: unless-stopped
     networks:
       - net
   uno-backend:
     ports:
       - '5000:80'
-    image: uno-backend
+    image: een/backend
+    build: ./backend
     restart: unless-stopped
     networks:
       - net
